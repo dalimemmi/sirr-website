@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-28 16:17 (pre-commit from 8f89285)
+- Updated `components/LanguageProvider.tsx`
+
+
 ### 2026-05-28 15:49 (pre-commit from 888cdbe)
 - Updated `.githooks/pre-commit`
 - Updated `.github/workflows/changelog-guard.yml`

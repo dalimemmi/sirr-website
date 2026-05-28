@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { getCopy, type WebsiteCopy, type WebsiteLocale } from "@/lib/i18n";
 
 const STORAGE_KEY = "sirr-website-lang";
+const NORWEGIAN_LANGUAGE_CODES = new Set(["no", "nb", "nn"]);
 
 type LanguageContextValue = {
   locale: WebsiteLocale;
@@ -13,16 +14,30 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
+function isWebsiteLocale(value: string | null): value is WebsiteLocale {
+  return value === "en" || value === "no";
+}
+
+function browserPrefersNorwegian(): boolean {
+  const tags = navigator.languages?.length ? navigator.languages : [navigator.language];
+
+  return tags.some((tag) => {
+    const code = tag?.toLowerCase().split("-")[0] ?? "";
+    return NORWEGIAN_LANGUAGE_CODES.has(code);
+  });
+}
+
 function detectLocale(): WebsiteLocale {
   if (typeof window === "undefined") return "en";
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "en" || stored === "no") return stored;
-  const tags = navigator.languages?.length ? navigator.languages : [navigator.language];
-  const norwegian = tags.some((tag) => {
-    const code = (tag || "").toLowerCase().split("-")[0];
-    return code === "no" || code === "nb" || code === "nn";
-  });
-  return norwegian ? "no" : "en";
+
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (isWebsiteLocale(stored)) return stored;
+  } catch {
+    // Storage may be unavailable in private or restricted browser contexts.
+  }
+
+  return browserPrefersNorwegian() ? "no" : "en";
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
@@ -30,7 +45,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const setLocale = useCallback((next: WebsiteLocale) => {
     setLocaleState(next);
-    localStorage.setItem(STORAGE_KEY, next);
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch {
+      // The visible language can still update even if persistence is blocked.
+    }
     document.documentElement.lang = next === "no" ? "no" : "en";
   }, []);
 
