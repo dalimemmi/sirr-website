@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-28 17:15 (pre-commit from 49aa2dc)
+- Updated `components/marketing/HomePage.tsx`
+
+
 ### 2026-05-28 16:17 (pre-commit from 8f89285)
 - Updated `components/LanguageProvider.tsx`
 

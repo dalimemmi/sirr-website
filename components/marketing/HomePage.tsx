@@ -49,26 +49,20 @@ export function HomePage() {
     <div className="min-h-screen">
       <MarketingHeader />
       <main>
-        <section id="home-hero" className="relative isolate min-h-[88vh] border-b border-border/40">
+        <section
+          id="home-hero"
+          className="relative isolate min-h-[88vh] border-b border-border/40 bg-slate-950"
+        >
           <video
             autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
-            poster="/hero/sirr-hero-poster.png"
+            preload="auto"
             className="absolute inset-0 -z-30 h-full w-full object-cover"
           >
             <source src="/hero/sirr-hero.mp4" type="video/mp4" />
           </video>
-          <Image
-            src="/hero/sirr-hero-poster.png"
-            alt=""
-            aria-hidden
-            fill
-            priority
-            className="absolute inset-0 -z-40 h-full w-full object-cover"
-          />
           <div className="absolute inset-0 -z-20 bg-gradient-to-b from-slate-950/70 via-slate-950/58 to-slate-950/76" />
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/0.28),transparent_48%)]" />
           <div className="container relative mx-auto max-w-5xl px-4 pb-20 pt-24 text-center lg:pb-28 lg:pt-32">
