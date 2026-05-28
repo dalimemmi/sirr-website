@@ -51,20 +51,29 @@ export function HomePage() {
       <main>
         <section
           id="home-hero"
-          className="relative isolate min-h-[88vh] border-b border-border/40 bg-slate-950"
+          className="relative isolate min-h-[88vh] border-b border-border/40"
         >
+          <Image
+            src="/hero/sirr-hero-background.png"
+            alt=""
+            aria-hidden
+            fill
+            priority
+            sizes="100vw"
+            className="absolute inset-0 -z-40 h-full w-full object-cover"
+          />
           <video
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
+            poster="/hero/sirr-hero-background.png"
             className="absolute inset-0 -z-30 h-full w-full object-cover"
           >
             <source src="/hero/sirr-hero.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 -z-20 bg-gradient-to-b from-slate-950/70 via-slate-950/58 to-slate-950/76" />
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/0.28),transparent_48%)]" />
           <div className="container relative mx-auto max-w-5xl px-4 pb-20 pt-24 text-center lg:pb-28 lg:pt-32">
             <div className="mx-auto max-w-4xl">
               <span className="inline-flex rounded-full border border-white/30 bg-white/8 px-3 py-1 text-xs font-semibold uppercase tracking-[0.13em] text-white">

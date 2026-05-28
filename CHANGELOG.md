@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-28 17:22 (pre-commit from f53d7ab)
+- Updated `components/marketing/HomePage.tsx`
+- Updated `public/hero/sirr-hero-background.png`
+
+
 ### 2026-05-28 17:15 (pre-commit from 49aa2dc)
 - Updated `components/marketing/HomePage.tsx`
 
