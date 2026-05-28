@@ -17,6 +17,7 @@ Edit `.env.local`:
 |----------|---------|
 | `NEXT_PUBLIC_SITE_URL` | This site's public URL (SEO, sitemap) |
 | `NEXT_PUBLIC_APP_URL` | Sirr app URL for Sign in / Get started CTAs |
+| `NEXT_PUBLIC_APP_AUTH_URL` | Direct auth URL override (recommended: `https://nestesteg.vercel.app/auth`) |
 
 ## Development
 
@@ -32,6 +33,18 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 npm start
 ```
+
+## Changelog
+
+See `CHANGELOG.md` for project history and notable changes.
+
+Changelog updates are automated via a local Git `pre-commit` hook:
+
+- On each commit, staged file changes are appended under `## Unreleased` in `CHANGELOG.md`.
+- The hook stages `CHANGELOG.md` automatically before commit completes.
+- If hooks are missing, run `npm run prepare` to reinstall them.
+
+GitHub also enforces changelog updates on pull requests via `.github/workflows/changelog-guard.yml`.
 
 ## Deploy (Vercel)
 

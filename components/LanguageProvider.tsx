@@ -26,11 +26,7 @@ function detectLocale(): WebsiteLocale {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<WebsiteLocale>("en");
-
-  useEffect(() => {
-    setLocaleState(detectLocale());
-  }, []);
+  const [locale, setLocaleState] = useState<WebsiteLocale>(() => detectLocale());
 
   const setLocale = useCallback((next: WebsiteLocale) => {
     setLocaleState(next);

@@ -1,0 +1,42 @@
+name: Changelog Guard
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  require-changelog-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate changelog was updated
+        run: |
+          set -euo pipefail
+
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          CHANGED_FILES="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")"
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+
+          NON_CHANGELOG_FILES="$(echo "$CHANGED_FILES" | rg -v '^CHANGELOG\.md$' || true)"
+
+          # If only changelog changed (or no files somehow), pass.
+          if [ -z "${NON_CHANGELOG_FILES}" ]; then
+            echo "No non-changelog files changed. Guard passed."
+            exit 0
+          fi
+
+          if echo "$CHANGED_FILES" | rg -q '^CHANGELOG\.md$'; then
+            echo "CHANGELOG.md updated. Guard passed."
+            exit 0
+          fi
+
+          echo "::error::This PR changes code/content but does not update CHANGELOG.md."
+          echo "Please add a changelog entry under the Unreleased section."
+          exit 1

@@ -15,10 +15,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https:/
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: en.meta.title,
+    default: "Sirr — AI Career Intelligence Platform",
     template: `%s | ${en.brand.name}`,
   },
-  description: en.meta.description,
+  description:
+    "Sirr is an AI Career Intelligence Platform that helps you find opportunities, win applications, and grow your career.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -33,14 +34,16 @@ export const metadata: Metadata = {
     alternateLocale: ["nb_NO"],
     url: siteUrl,
     siteName: en.brand.name,
-    title: en.meta.title,
-    description: en.meta.description,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: en.meta.title }],
+    title: "Sirr — AI Career Intelligence Platform",
+    description:
+      "Move from job-search chaos to an organized, AI-assisted workflow for applications and career growth.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Sirr — AI Career Intelligence Platform" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: en.meta.title,
-    description: en.meta.description,
+    title: "Sirr — AI Career Intelligence Platform",
+    description:
+      "Find opportunities, win applications, and grow your career with AI-powered intelligence.",
     images: ["/og.png"],
   },
 };

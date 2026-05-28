@@ -12,15 +12,15 @@ export function SirrLogo({ showTagline = false, className, href = "/" }: SirrLog
   const inner = (
     <div className={cn("min-w-0", className)}>
       <Image
-        src="/sirr-lockup.png"
+        src="/brand/sirr-logo-main.png"
         alt="Sirr"
-        width={904}
-        height={269}
-        className="h-14 w-auto max-w-full object-contain object-left md:h-16"
+        width={1720}
+        height={470}
+        className="h-10 w-auto max-w-full object-contain object-left sm:h-11"
         priority
       />
       {showTagline && (
-        <p className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.13em] text-muted-foreground sm:text-[11px]">
+        <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.13em] text-muted-foreground sm:text-[11px]">
           AI Career Intelligence
         </p>
       )}
