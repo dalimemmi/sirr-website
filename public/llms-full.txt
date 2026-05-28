@@ -1,0 +1,88 @@
+# Sirr — Full LLM context
+
+## Brand summary
+
+Sirr (https://sirr.no) is an AI Career Intelligence Platform. The product helps users:
+1. Find opportunities with AI relevance and match scoring
+2. Win applications with tailored CVs and cover letters
+3. Grow careers with planning, salary forecasting, and skills roadmaps
+
+Target market emphasis: Norway (Finn.no, NAV, Norwegian job search workflows), with English support.
+
+## Homepage
+
+URL: https://sirr.no/
+
+Sirr positions itself as a serious SaaS platform for modern career progression. Core message: move from fragmented job search to one intelligent workspace.
+
+Key capabilities highlighted:
+- Match score and relevance
+- Kanban-style application flow
+- Long-term career planning (5–15 year horizon)
+
+## Features
+
+URL: https://sirr.no/features
+
+Feature areas:
+- Job matching: match score, AI relevance, recommendations
+- Application tracker: kanban workflow, deadlines, follow-ups, status tracking
+- AI tailored CVs: role-specific resume generation and keyword optimization
+- AI cover letters: personalized letters from extracted job context
+- Chrome extension: save jobs from LinkedIn, Finn.no, NAV, and company sites
+- Career planning: roadmap, salary growth, skills planning, recommendations
+- Career intelligence: AI insights, long-term planning, application analytics
+
+## Pricing
+
+URL: https://sirr.no/pricing
+
+Plans:
+- Free: manual job saving, basic tracker, limited AI generations, basic match insights
+- Pro (149 NOK/month): Chrome extension, unlimited tracker, AI CV/cover letter generation, salary forecasting, skills roadmap
+
+Fair usage limits apply.
+
+## FAQ
+
+URL: https://sirr.no/faq
+
+Q: Hva er Sirr?
+A: Sirr er en AI-drevet karriereplattform som hjelper deg finne relevante stillinger, vinne søknader og vokse i karrieren.
+
+Q: Er Sirr en jobbportal?
+A: Nei. Sirr kombinerer matching, dokumentgenerering, sporing og langsiktig planlegging.
+
+Q: Kan jeg lagre jobber fra LinkedIn og Finn?
+A: Ja. Sirr støtter jobbimport fra LinkedIn, Finn.no, NAV og bedriftssider.
+
+Q: Er Chrome-utvidelsen inkludert i gratisplanen?
+A: Nei. Chrome-utvidelse er en del av Pro-planen.
+
+Q: Hvordan fungerer AI-CV?
+A: Sirr bruker stillingskontekst og profilen din til å lage rolle-spesifikke CV-utkast.
+
+Q: Finnes det en gratis plan?
+A: Ja. Du kan starte med en gratis plan.
+
+## About
+
+URL: https://sirr.no/about
+
+Sirr's mission is to turn job-search chaos into an organized, AI-assisted career workflow.
+
+## Contact
+
+URL: https://sirr.no/contact
+
+Use the contact page for product questions, partnerships, and early access conversations.
+
+## SEO and discovery files
+
+- robots.txt: https://sirr.no/robots.txt
+- sitemap.xml: https://sirr.no/sitemap.xml
+- llms.txt: https://sirr.no/llms.txt
+
+## Keywords for retrieval
+
+Sirr, AI karriere, jobbsøk Norge, Finn.no, LinkedIn stillinger, NAV, CV generator, søknadsbrev, søknadssporing, karriereplan, matchscore, Chrome-utvidelse, karriereintelligens

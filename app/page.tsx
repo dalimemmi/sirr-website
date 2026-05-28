@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
 import { HomePage } from "@/components/marketing/HomePage";
+import { SoftwareApplicationJsonLd } from "@/components/seo/JsonLd";
+import { pageSeo } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Sirr — AI Career Intelligence Platform",
-  description:
-    "Sirr is an AI Career Intelligence Platform that helps you find opportunities, win applications, and grow your career.",
-};
+export const metadata = pageSeo.home;
 
 export default function Page() {
-  return <HomePage />;
+  return (
+    <>
+      <SoftwareApplicationJsonLd />
+      <HomePage />
+    </>
+  );
 }

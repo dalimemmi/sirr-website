@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { ContentSection, MarketingPage } from "@/components/marketing/PageScaffold";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { buttonClassName } from "@/components/ui/button";
 import { authUrl } from "@/lib/appLinks";
 import { cn } from "@/lib/cn";
+import { pageSeo } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Pricing — Sirr",
-  description: "Simple Sirr pricing with Free and Pro plans for AI-powered career intelligence.",
-};
+export const metadata = pageSeo.pricing;
 
 const freePlan = [
   "Manual job saving",
@@ -37,7 +35,14 @@ const proPlan = [
 
 export default function PricingPage() {
   return (
-    <MarketingPage
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Hjem", path: "" },
+          { name: "Priser", path: "/pricing" },
+        ]}
+      />
+      <MarketingPage
       title="Simple pricing for better career execution"
       subtitle="Start with Free and upgrade to Pro when you need full AI-powered workflow capacity."
     >
@@ -55,6 +60,7 @@ export default function PricingPage() {
         </div>
       </ContentSection>
     </MarketingPage>
+    </>
   );
 }
 

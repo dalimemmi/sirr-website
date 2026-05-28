@@ -1,15 +1,13 @@
 import type { MetadataRoute } from "next";
+import { PUBLIC_ROUTES, SITE_URL } from "@/lib/seo/site";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://sirr.no";
+const SITE_LAST_MODIFIED = new Date("2026-05-28T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/features", "/pricing", "/about", "/faq", "/contact"];
-  return [
-    ...routes.map((route, index) => ({
-      url: `${siteUrl}${route}`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: index === 0 ? 1 : 0.8,
-    })),
-  ];
+  return PUBLIC_ROUTES.map((route) => ({
+    url: `${SITE_URL}${route.path}`,
+    lastModified: SITE_LAST_MODIFIED,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }

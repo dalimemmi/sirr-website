@@ -1,15 +1,19 @@
-import type { Metadata } from "next";
 import { ContentSection, MarketingPage } from "@/components/marketing/PageScaffold";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { pageSeo } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "About Sirr — AI Career Intelligence",
-  description:
-    "Learn about Sirr's mission to turn job-search chaos into an organized, AI-assisted career workflow.",
-};
+export const metadata = pageSeo.about;
 
 export default function AboutPage() {
   return (
-    <MarketingPage
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Hjem", path: "" },
+          { name: "Om oss", path: "/about" },
+        ]}
+      />
+      <MarketingPage
       title="Building the future of career intelligence"
       subtitle="Sirr helps candidates organize and improve job search decisions with AI-powered clarity."
     >
@@ -45,6 +49,7 @@ export default function AboutPage() {
         </p>
       </ContentSection>
     </MarketingPage>
+    </>
   );
 }
 

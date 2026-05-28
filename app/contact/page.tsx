@@ -1,17 +1,22 @@
-import type { Metadata } from "next";
 import { ContentSection, MarketingPage } from "@/components/marketing/PageScaffold";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { buttonClassName } from "@/components/ui/button";
 import { authUrl } from "@/lib/appLinks";
 import { cn } from "@/lib/cn";
+import { pageSeo } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact — Sirr",
-  description: "Contact Sirr for product, partnership, or early-access conversations.",
-};
+export const metadata = pageSeo.contact;
 
 export default function ContactPage() {
   return (
-    <MarketingPage
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Hjem", path: "" },
+          { name: "Kontakt", path: "/contact" },
+        ]}
+      />
+      <MarketingPage
       title="Contact Sirr"
       subtitle="Reach out for early access, partnerships, or product questions."
     >
@@ -61,6 +66,7 @@ export default function ContactPage() {
         </div>
       </ContentSection>
     </MarketingPage>
+    </>
   );
 }
 

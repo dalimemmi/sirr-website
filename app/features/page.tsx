@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { ContentSection, MarketingPage } from "@/components/marketing/PageScaffold";
+import { BreadcrumbJsonLd, SoftwareApplicationJsonLd } from "@/components/seo/JsonLd";
+import { pageSeo } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Features — Sirr AI Career Intelligence",
-  description:
-    "Explore Sirr features for job matching, application tracking, AI CV and cover letters, career planning, and intelligent career insights.",
-};
+export const metadata = pageSeo.features;
 
 const blocks = [
   {
@@ -63,7 +60,15 @@ const blocks = [
 
 export default function FeaturesPage() {
   return (
-    <MarketingPage
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Hjem", path: "" },
+          { name: "Funksjoner", path: "/features" },
+        ]}
+      />
+      <SoftwareApplicationJsonLd />
+      <MarketingPage
       title="Features built for serious career progress"
       subtitle="Sirr combines discovery, execution, and long-term planning in one intelligent workspace."
     >
@@ -134,5 +139,6 @@ export default function FeaturesPage() {
         </div>
       </ContentSection>
     </MarketingPage>
+    </>
   );
 }

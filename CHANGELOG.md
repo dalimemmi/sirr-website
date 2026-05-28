@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-28 22:54 (pre-commit from 2bf507f)
+- Updated `.env.example`
+- Updated `README.md`
+- Updated `app/about/page.tsx`
+- Updated `app/contact/page.tsx`
+- Updated `app/faq/page.tsx`
+- Updated `app/features/page.tsx`
+- Updated `app/layout.tsx`
+- Updated `app/page.tsx`
+- Updated `app/pricing/page.tsx`
+- Updated `app/robots.ts`
+- Updated `app/sitemap.ts`
+- Updated `components/seo/JsonLd.tsx`
+- Updated `lib/seo/faq.ts`
+- Updated `lib/seo/metadata.ts`
+- Updated `lib/seo/site.ts`
+- Updated `public/llms-full.txt`
+- Updated `public/llms.txt`
+- Updated `public/og-1200x630.png`
+- Updated `public/site.webmanifest`
+
+
 ### 2026-05-28 17:22 (pre-commit from f53d7ab)
 - Updated `components/marketing/HomePage.tsx`
 - Updated `public/hero/sirr-hero-background.png`

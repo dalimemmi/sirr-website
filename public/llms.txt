@@ -1,0 +1,39 @@
+# Sirr
+
+> Sirr is an AI Career Intelligence Platform for job seekers in Norway and internationally. It helps candidates find relevant roles, tailor CVs and cover letters, track applications, and plan long-term career growth. Sirr supports job capture workflows from Finn.no, LinkedIn, NAV, and company websites.
+
+Sirr is not a traditional job board. It is an intelligent workspace for matching, application execution, and career planning.
+
+## Primary pages
+
+- [Home](https://sirr.no/): Product overview, value proposition, and conversion CTAs
+- [Features](https://sirr.no/features): Job matching, application tracker, AI CV/cover letters, Chrome extension, career planning
+- [Pricing](https://sirr.no/pricing): Free and Pro plans (NOK)
+- [FAQ](https://sirr.no/faq): Product, Finn/LinkedIn/NAV support, privacy, plans
+- [About](https://sirr.no/about): Mission and product vision
+- [Contact](https://sirr.no/contact): Product, partnership, and support inquiries
+
+## Product capabilities
+
+- AI job match score and relevance insights
+- Application tracker with stages, reminders, and follow-ups
+- AI tailored CV and cover letter generation
+- Chrome extension for one-click job capture (Pro)
+- Career plan with salary forecast and skills roadmap
+
+## Audience
+
+- Ambitious candidates in Norway seeking structured job search
+- Professionals applying via Finn.no, LinkedIn, NAV, and company career pages
+- Users who want one workflow for discovery, applications, and growth
+
+## Canonical domain
+
+- Website: https://sirr.no
+- Sitemap: https://sirr.no/sitemap.xml
+- Extended context: https://sirr.no/llms-full.txt
+
+## Language
+
+- Primary: Norwegian (Bokmål)
+- Secondary: English (in-app language toggle)

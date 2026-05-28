@@ -1,6 +1,6 @@
 # Sirr website
 
-Public marketing site for [Sirr](https://sirr.no) — AI Career Intelligence. Phase 1: homepage only.
+Public marketing site for [Sirr](https://sirr.no) — AI Career Intelligence.
 
 The product app lives in the separate **sirr-app** repository.
 
@@ -50,12 +50,28 @@ GitHub also enforces changelog updates on pull requests via `.github/workflows/c
 
 1. Create a new Vercel project from `dalimemmi/sirr-website`.
 2. Set environment variables (Production + Preview):
-   - `NEXT_PUBLIC_SITE_URL` → your website domain (e.g. `https://sirr-website.vercel.app`)
+   - `NEXT_PUBLIC_SITE_URL` → `https://sirr.no` (production)
    - `NEXT_PUBLIC_APP_URL` → sirr-app URL (e.g. `https://nestesteg.vercel.app`)
 3. Deploy. No Supabase or server secrets required.
 
 ## Architecture
 
-- **Next.js App Router** — static homepage, EN/NO i18n
-- **No backend** — all CTAs point to `NEXT_PUBLIC_APP_URL/auth`
-- Future pages (Pricing, Features, About, etc.) will be added here
+- **Next.js App Router** — static marketing pages, EN/NO i18n (client toggle)
+- **No backend** — all CTAs point to `NEXT_PUBLIC_APP_AUTH_URL` or `NEXT_PUBLIC_APP_URL/auth`
+
+## SEO and LLM discoverability
+
+Production SEO is configured for `https://sirr.no`:
+
+- Metadata helper: `lib/seo/metadata.ts` (Norwegian-first titles, Open Graph, Twitter, canonical URLs)
+- Structured data: `components/seo/JsonLd.tsx` (Organization, WebSite, SoftwareApplication, FAQPage, BreadcrumbList)
+- `public/llms.txt` and `public/llms-full.txt` for AI crawler context
+- `app/sitemap.ts` and `app/robots.ts` (includes explicit allow rules for major AI crawlers)
+- Social preview image: `public/og-1200x630.png` (1200×630 for LinkedIn)
+
+After deploy, verify:
+
+- `https://sirr.no/sitemap.xml`
+- `https://sirr.no/robots.txt`
+- `https://sirr.no/llms.txt`
+- LinkedIn Post Inspector for homepage OG tags
