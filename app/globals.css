@@ -1,26 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
+/* Sirr — AI Career Intelligence. All colors HSL. */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 210 40% 98%;
+  --foreground: 215 28% 14%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 215 28% 14%;
+
+  --primary: 205 78% 32%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 205 40% 92%;
+  --secondary-foreground: 205 78% 26%;
+
+  --muted: 205 25% 94%;
+  --muted-foreground: 215 12% 42%;
+
+  --accent: 205 55% 92%;
+  --accent-foreground: 205 78% 28%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 205 22% 88%;
+  --input: 205 22% 88%;
+  --ring: 205 78% 32%;
+
+  --radius: 0.75rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --radius-lg: var(--radius);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: hsl(var(--border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.nest-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, hsl(205 60% 92% / 0.7) 0%, transparent 55%),
+    linear-gradient(
+      160deg,
+      hsl(var(--background)) 0%,
+      hsl(205 45% 97%) 50%,
+      hsl(205 50% 94%) 100%
+    );
 }
