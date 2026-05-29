@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-29 12:58 (pre-commit from 98570f2)
+- Updated `app/privacy/page.tsx`
+- Updated `app/terms/page.tsx`
+- Updated `components/marketing/MarketingShell.tsx`
+- Updated `lib/seo/metadata.ts`
+- Updated `lib/seo/site.ts`
+
+
 ### 2026-05-29 12:24 (pre-commit from 12eb261)
 - Updated `app/pricing/page.tsx`
 - Updated `components/marketing/HomePage.tsx`

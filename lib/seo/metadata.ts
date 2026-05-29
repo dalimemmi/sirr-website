@@ -181,4 +181,18 @@ export const pageSeo = {
       "Ta kontakt med Sirr for produktspørsmål, partnerskap eller tidlig tilgang til AI-plattformen for karriere og jobbsøk.",
     keywords: ["kontakt Sirr", "demo", "partnerskap", "karriereplattform"],
   }),
+  privacy: buildPageMetadata({
+    path: "/privacy",
+    title: "Personvern — hvordan Sirr behandler data",
+    description:
+      "Les hvordan Sirr behandler jobbrelatert data, hvilke rettigheter du har under GDPR, og hvordan du kan be om innsyn, retting eller sletting.",
+    keywords: ["personvern", "GDPR", "sletting av data", "innsyn", "retting", "Sirr"],
+  }),
+  terms: buildPageMetadata({
+    path: "/terms",
+    title: "Vilkår for bruk — Sirr",
+    description:
+      "Vilkår for bruk av Sirr, inkludert tjenestebeskrivelse, brukeransvar, ansvarsbegrensning, gjeldende lov og oppdateringer.",
+    keywords: ["vilkår", "terms", "brukervilkår", "Sirr"],
+  }),
 } as const;

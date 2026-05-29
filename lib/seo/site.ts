@@ -51,6 +51,8 @@ export const PUBLIC_ROUTES = [
   { path: "/faq", label: "FAQ", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/about", label: "Om oss", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/contact", label: "Kontakt", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/privacy", label: "Personvern", priority: 0.5, changeFrequency: "monthly" as const },
+  { path: "/terms", label: "Vilkår", priority: 0.5, changeFrequency: "monthly" as const },
 ];
 
 export function absoluteUrl(path = ""): string {
