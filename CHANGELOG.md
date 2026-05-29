@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-29 08:27 (pre-commit from 1b6e13a)
+- Updated `.env.example`
+- Updated `README.md`
+- Updated `lib/appLinks.ts`
+
+
 ### 2026-05-29 08:21 (pre-commit from ddc923b)
 - Updated `app/favicon.ico`
 - Updated `lib/seo/metadata.ts`

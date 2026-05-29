@@ -17,7 +17,7 @@ Edit `.env.local`:
 |----------|---------|
 | `NEXT_PUBLIC_SITE_URL` | This site's public URL (SEO, sitemap) |
 | `NEXT_PUBLIC_APP_URL` | Sirr app URL for Sign in / Get started CTAs |
-| `NEXT_PUBLIC_APP_AUTH_URL` | Direct auth URL override (recommended: `https://nestesteg.vercel.app/auth`) |
+| `NEXT_PUBLIC_APP_AUTH_URL` | Direct auth URL override (recommended: `https://app.sirr.no/auth`) |
 
 ## Development
 
@@ -51,7 +51,8 @@ GitHub also enforces changelog updates on pull requests via `.github/workflows/c
 1. Create a new Vercel project from `dalimemmi/sirr-website`.
 2. Set environment variables (Production + Preview):
    - `NEXT_PUBLIC_SITE_URL` → `https://sirr.no` (production)
-   - `NEXT_PUBLIC_APP_URL` → sirr-app URL (e.g. `https://nestesteg.vercel.app`)
+   - `NEXT_PUBLIC_APP_URL` → `https://app.sirr.no`
+   - `NEXT_PUBLIC_APP_AUTH_URL` → `https://app.sirr.no/auth`
 3. Deploy. No Supabase or server secrets required.
 
 ## Architecture

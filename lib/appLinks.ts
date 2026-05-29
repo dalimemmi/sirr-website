@@ -1,5 +1,8 @@
-const appBase = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") ?? "";
-const appAuth = process.env.NEXT_PUBLIC_APP_AUTH_URL?.replace(/\/$/, "") ?? "";
+const DEFAULT_APP_URL = "https://app.sirr.no";
+const DEFAULT_APP_AUTH_URL = `${DEFAULT_APP_URL}/auth`;
+
+const appBase = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") ?? DEFAULT_APP_URL;
+const appAuth = process.env.NEXT_PUBLIC_APP_AUTH_URL?.replace(/\/$/, "") ?? DEFAULT_APP_AUTH_URL;
 
 export function appUrl(path = "/"): string {
   if (!appBase) return path;
@@ -7,8 +10,7 @@ export function appUrl(path = "/"): string {
 }
 
 export function authUrl(): string {
-  if (appAuth) return appAuth;
-  return appUrl("/auth");
+  return appAuth;
 }
 
 export function appSiteUrl(): string | undefined {
