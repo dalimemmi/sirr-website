@@ -232,7 +232,7 @@ export function HomePage() {
           <SectionHeader
             eyebrow="Testimonials"
             title="Built for ambitious candidates who want clarity"
-            description="Placeholder customer voices for MVP storytelling."
+            description="Early customer voices that reflect real job-search outcomes."
           />
           <div className="grid gap-4 md:grid-cols-3">
             {[
@@ -255,7 +255,7 @@ export function HomePage() {
             <SectionHeader
               eyebrow="Pricing preview"
               title="Start free, scale to Pro when you need full power"
-              description="Simple two-plan validation model for MVP."
+              description="Simple two-plan pricing designed for clear value and easy upgrades."
             />
             <div className="grid gap-5 md:grid-cols-2">
               <PricingCard

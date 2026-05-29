@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### 2026-05-29 12:24 (pre-commit from 12eb261)
+- Updated `app/pricing/page.tsx`
+- Updated `components/marketing/HomePage.tsx`
+
+
 ### 2026-05-29 08:27 (pre-commit from 1b6e13a)
 - Updated `.env.example`
 - Updated `README.md`

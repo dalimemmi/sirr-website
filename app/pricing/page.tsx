@@ -48,8 +48,8 @@ export default function PricingPage() {
     >
       <ContentSection
         eyebrow="Monthly plans"
-        title="Two plans for MVP validation"
-        description="Future-ready layout for yearly pricing will be added later."
+        title="Two plans for every stage"
+        description="Simple monthly pricing with room for yearly plans later."
       >
         <div className="pricing-stage rounded-3xl border border-primary/15 p-4 md:p-6">
           <div className="grid gap-6 md:grid-cols-2">
